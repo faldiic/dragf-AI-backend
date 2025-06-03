@@ -1,0 +1,274 @@
+/* UploadPhoto component styles */
+.upload-photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+}
+.upload-info {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.upload-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.upload-tip {
+  font-size: 0.95rem;
+  color: #888;
+}
+.upload-arrow {
+  margin: 0 1rem;
+  display: none;
+  color: #b48a78;
+  transition: transform 0.2s;
+}
+.desktop-arrow {
+  display: none;
+}
+.mobile-arrow {
+  display: flex;
+  margin: 1rem 0;
+}
+@media (min-width: 768px) {
+  .desktop-arrow {
+    display: flex;
+  }
+  .mobile-arrow {
+    display: none;
+  }
+}
+.upload-dropzone {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  min-height: 220px;
+  background: #f8f8f8;
+  border: 2px dashed #b48a78;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 1.5rem 0;
+  transition: background 0.2s, border-color 0.2s;
+  overflow: hidden;
+}
+.upload-dropzone:hover {
+  background: #fff7f0;
+  border-color: #e0a96d;
+}
+.upload-icon {
+  margin-bottom: 0.7rem;
+  color: #b48a78;
+}
+.upload-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.upload-dropzone-text {
+  text-align: center;
+  z-index: 1;
+}
+.upload-dropzone-text small {
+  color: #888;
+  display: block;
+  margin-top: 0.3rem;
+}
+.upload-filename {
+  margin-top: 0.5rem;
+  color: #b48a78;
+  font-size: 0.98rem;
+}
+.upload-preview {
+  margin-top: 1rem;
+  max-width: 90%;
+  max-height: 120px;
+  border-radius: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e0a96d;
+}
+
+/* UploadPhoto advanced styles */
+.upload-dropzone-react {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  min-height: 220px;
+  background: #f8f8f8;
+  border: 2px dashed #b48a78;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 1.5rem 0;
+  transition: background 0.2s, border-color 0.2s;
+  overflow: hidden;
+  text-align: center;
+}
+.upload-dropzone-react:hover {
+  background: #fff7f0;
+  border-color: #e0a96d;
+}
+.upload-icon-svg {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+  color: #b48a78;
+  display: block;
+}
+.upload-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.upload-dropzone-text {
+  text-align: center;
+  z-index: 1;
+}
+.upload-dropzone-text small {
+  color: #888;
+  display: block;
+  margin-top: 0.3rem;
+}
+.upload-preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  margin: 1.5rem auto;
+  background: #f8f8f8;
+  border-radius: 1.2rem;
+  border: 1.5px solid #e0a96d;
+  padding: 1.5rem 1rem 1rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.upload-preview-img {
+  width: 100%;
+  max-width: 300px;
+  max-height: 220px;
+  border-radius: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid #e0a96d;
+  object-fit: contain;
+  transition: opacity 0.3s;
+}
+.upload-preview-img.opacity-50 {
+  opacity: 0.5;
+}
+.upload-preview-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.upload-btn {
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  background: #e0a96d;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.upload-btn.outline {
+  background: #fff;
+  color: #b48a78;
+  border: 1.5px solid #e0a96d;
+}
+.upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.upload-message {
+  margin-top: 1.2rem;
+  font-size: 0.98rem;
+  text-align: center;
+}
+.upload-message.error {
+  color: #d32f2f;
+}
+.upload-message.uploading {
+  color: #b48a78;
+}
+.upload-message-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+.upload-dots {
+  font-size: 1.3rem;
+  color: #b48a78;
+  letter-spacing: 0.2em;
+  animation: blink 1.2s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.upload-message-text {
+  font-size: 1rem;
+  color: #b48a78;
+  margin-top: 0.2rem;
+  transition: opacity 0.3s;
+}
+
+/* Center the upload photo area horizontally and vertically in its section */
+.upload-photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+}
+
+/* Center the dropzone and preview container */
+.upload-dropzone-react,
+.upload-preview-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure the parent of UploadPhoto is also centered */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+  .upload-photo-container {
+    padding: 0.5rem;
+  }
+  .upload-dropzone-react,
+  .upload-preview-container {
+    max-width: 95vw;
+  }
+}
