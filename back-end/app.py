@@ -14,8 +14,7 @@ HEX_LIST = ['#f6ede4','#f3e7db','#f7ead0','#eadaba','#d7bd96','#a07e56','#825c43
 LABELS = [f'mst_{i+1}' for i in range(len(HEX_LIST))]
 
 app = Flask(__name__)
-app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
-CORS(app)
+CORS(app, origins=["https://dragf-ai.vercel.app"])
 model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 
 def segment_skin(img):
